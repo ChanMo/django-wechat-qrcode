@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+django_member_qrcode.egg-info/PKG-INFO
+django_member_qrcode.egg-info/SOURCES.txt
+django_member_qrcode.egg-info/dependency_links.txt
+django_member_qrcode.egg-info/top_level.txt
+qrcode/__init__.py
+qrcode/admin.py
+qrcode/models.py
+qrcode/tests.py
+qrcode/urls.py
+qrcode/views.py
+qrcode/templates/qrcode/qrcode.html
