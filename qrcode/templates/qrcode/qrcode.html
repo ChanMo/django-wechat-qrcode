@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="zh-hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>二维码</title>
+    <link href="http://cdn.bootcss.com/foundation/6.2.0/foundation.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="row" style="mragin-top:2rem;">
+      <div class="small-8 small-centered columns">
+        <img src="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket={{ qrcode.ticket }}">
+        {% if qrcode.inviter %}
+        <span>邀请人:{{ qrcode.inviter }}</span>
+        {% endif %}
+        <h4>{{ qrcode.member.name }}</h4>
+        <span>推广数量:{{ qrcode.people.count }}</span>
+      </div>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/foundation/6.2.0/foundation.min.js"></script>
+    <script>
+    $(document).foundation();
+    </script>
+  </body>
+</html>
