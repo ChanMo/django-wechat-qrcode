@@ -8,12 +8,12 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name = 'django_member_qrcode',
-    version = '0.1',
+    name = 'django-wechat-qrcode',
+    version = '0.18',
     packages = ['qrcode'],
     include_package_data = True,
     license = 'BSD License',
-    description = 'qrcode for wechat member',
+    description = 'add get_qrcode function to QrcodeApi',
     long_description = README,
     url = 'http://www.findchen.com/',
     author = 'Chen',

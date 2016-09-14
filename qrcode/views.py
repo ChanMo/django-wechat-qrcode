@@ -1,5 +1,3 @@
-#!/usr/bin/python
-# vim: set fileencoding=utf8 :
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import TemplateView
@@ -9,6 +7,17 @@ from wechat_member.models import Member
 from .models import Qrcode
 
 class QrcodeApi(api.Base):
+    """
+    get qrcode model
+    """
+    def get_qrcode(self, member):
+        try:
+            qrcode = Qrcode.objects.get(member=member)
+        except Qrcode.DoesNotExist:
+            qrcode = self.create_qrcode(member)
+        return qrcode
+
+
     """
     create member for django_wechat_member
     """
@@ -82,17 +91,17 @@ class QrcodeResponse(api.Response):
                                 qrapi.set_qr_inviter(data['FromUserName'], qrvalue)
                         except KeyError:
                             pass
-                        keyword = u'关注'
+                        keyword = 'subscribe'
                     elif data['Event'] == u'CLICK':
                         keyword = data['EventKey']
                     elif data['Event'] == u'SCAN':
-                        keyword = u'默认'
+                        keyword = u'default'
                     else:
                         keyword = data['Event']
                 else:
-                    keyword = u'默认'
+                    keyword = 'customer_service'
             except KeyError:
-                keyword = u'默认'
+                keyword = 'customer_service'
 
         self.keyword = keyword
 
