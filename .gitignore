@@ -9,4 +9,4 @@
 **/.sass-cache
 
 build/
-django_wechat_base.egg-info/
+django_wechat_qrcode.egg-info/
