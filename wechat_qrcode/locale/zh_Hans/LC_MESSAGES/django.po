@@ -44,4 +44,4 @@ msgstr "二维码链接"
 
 #: models.py:34
 msgid "invite count"
-msgstr "邀请数量"
+msgstr "推广数量"

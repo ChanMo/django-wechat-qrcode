@@ -33,18 +33,18 @@
 
 .. code-block::
 
-    url(r'^qrcode/', include('qrcode.urls')),
+    url(r'^qrcode/', include('wechat_qrcode.urls')),
 
 更新数据库:
 
 .. code-block::
 
-   python manage.py makemigrations django_qrcode
+   python manage.py makemigrations wechat_qrcode 
    python manage.py migrate
 
 微信开发者链接:
 
-    http://yourdomain/qrcode/api/
+    http://yourdomain/qrcode/wx/
 
 用户二维码主页:
 

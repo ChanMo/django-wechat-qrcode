@@ -24,7 +24,7 @@ class Qrcode(models.Model):
                 % self.ticket
 
     def invite_count(self):
-        return self.inviter.count()
+        return self.people.count()
 
     class Meta(object):
         verbose_name = _('wechat qrcode')

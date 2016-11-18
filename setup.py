@@ -9,8 +9,8 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as readme:
 
 setup(
     name = 'django-wechat-qrcode',
-    version = '1.0.2',
-    description = 'fixed api json and default inviter id error',
+    version = '1.0.6',
+    description = 'rename invite count',
     long_description = README,
     url = 'https://github.com/ChanMo/django-wechat-qrcode/',
     author = 'ChanMo',
@@ -19,7 +19,7 @@ setup(
     keywords = 'django wechat weixin qrcode',
     packages = ['wechat_qrcode'],
     include_package_data = True,
-    install_requires = ['django-wechat-base'],
+    install_requires = ['django-wechat-message','django-wechat-member'],
     classifiers = [
         'Environment :: Web Environment',
         'Framework :: Django',
