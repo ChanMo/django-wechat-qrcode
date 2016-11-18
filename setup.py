@@ -1,31 +1,32 @@
-import os
 from setuptools import setup
+from os import path
+from codecs import open
 
-with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
+here = path.abspath(path.dirname(__file__))
+
+with open(path.join(here, 'README.rst'), encoding='utf-8') as readme:
     README = readme.read()
-
-# allow setup.py to be run from any path
-os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name = 'django-wechat-qrcode',
-    version = '0.18',
-    packages = ['qrcode'],
-    include_package_data = True,
-    license = 'BSD License',
-    description = 'add get_qrcode function to QrcodeApi',
+    version = '1.0.0',
+    description = 'prevent old and error version number, so set version to 1.0.0',
     long_description = README,
-    url = 'http://www.findchen.com/',
-    author = 'Chen',
+    url = 'https://github.com/ChanMo/django-wechat-qrcode/',
+    author = 'ChanMo',
     author_email = 'chen.orange@aliyun.com',
+    license = 'BSD License',
+    keywords = 'django wechat weixin qrcode',
+    packages = ['wechat_qrcode'],
+    include_package_data = True,
+    install_requires = ['django-wechat-base'],
     classifiers = [
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License', # example license
+        'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        # Replace these appropriately if you are stuck on Python 2.
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',

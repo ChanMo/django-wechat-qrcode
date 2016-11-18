@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-30 17:09+0800\n"
+"POT-Creation-Date: 2016-11-18 15:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,30 +18,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: models.py:10
+#: models.py:13
 msgid "member"
 msgstr "微信会员"
 
-#: models.py:11
+#: models.py:14
 msgid "ticket"
 msgstr "凭证"
 
-#: models.py:13
+#: models.py:16
 msgid "inviter"
 msgstr "邀请人"
 
-#: models.py:14
+#: models.py:17
 msgid "created"
-msgstr ""
+msgstr "创建时间"
 
-#: models.py:27 models.py:28
-msgid "qrcode"
-msgstr "二维码"
+#: models.py:30 models.py:31
+msgid "wechat qrcode"
+msgstr "微信二维码"
 
-#: models.py:30
+#: models.py:33
 msgid "qrcode url"
 msgstr "二维码链接"
 
-#: models.py:31
+#: models.py:34
 msgid "invite count"
 msgstr "邀请数量"

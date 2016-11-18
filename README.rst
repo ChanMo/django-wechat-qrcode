@@ -1,7 +1,5 @@
-基于django_wechat_member的二维码模块
-=====================================
-
-一个基于 `django_wechat_member <http://github.com/ChanMo/django_wechat_member/>`_ 的二维码模块
+基于django的微信二维码模块
+============================
 
 功能说明：
 ----------
@@ -12,7 +10,7 @@
 快速开始:
 ---------
 
-安装 *django-wechate-qrcode* :
+安装 *django-wechat-qrcode* :
 
 .. code-block::
 
@@ -24,7 +22,10 @@
 
     INSTALLED_APPS = (
         ...
-        'qrcode',
+        'wechat',
+        'wechat_message',
+        'wechat_member',
+        'wechat_qrcode',
         ...
     )
 
@@ -38,6 +39,7 @@
 
 .. code-block::
 
+   python manage.py makemigrations django_qrcode
    python manage.py migrate
 
 微信开发者链接:
@@ -51,4 +53,4 @@
 
 版本更改:
 ---------
-- v0.1 第一版
+- v1.0 模块名称更新为wechat_qrcode
