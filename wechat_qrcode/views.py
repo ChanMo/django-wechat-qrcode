@@ -23,7 +23,7 @@ def index(request):
 class Qrcode(WxMemberView, TemplateView):
     template_name = 'wechat_qrcode/qrcode.html'
     def get_context_data(self, **kwargs):
-        context = super(QrcodeView, self).get_context_data(**kwargs)
+        context = super(Qrcode, self).get_context_data(**kwargs)
         try:
             qrcode = QrcodeModel.objects.get(member=self.wx_member)
         except QrcodeModel.DoesNotExist:

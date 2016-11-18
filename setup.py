@@ -9,8 +9,8 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as readme:
 
 setup(
     name = 'django-wechat-qrcode',
-    version = '1.0.0',
-    description = 'prevent old and error version number, so set version to 1.0.0',
+    version = '1.0.2',
+    description = 'fixed api json and default inviter id error',
     long_description = README,
     url = 'https://github.com/ChanMo/django-wechat-qrcode/',
     author = 'ChanMo',

@@ -1,3 +1,4 @@
+import json
 from wechat.api import Base
 from wechat_message.api import Message as MessageApi
 from wechat_member.models import Member
@@ -15,7 +16,7 @@ class Qrcode(Base):
             qrcode = self.create_qrcode(member)
         return qrcode
 
-    def create_qrcode(self, member, inviter_id=False):
+    def create_qrcode(self, member, inviter_id=None):
         """ create qrcode object """
         qrcode = QrcodeModel(member=member, inviter_id=inviter_id)
         qrcode.save()
